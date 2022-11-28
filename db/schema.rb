@@ -10,9 +10,57 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_28_132127) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_28_150056) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.bigint "training_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["training_id"], name: "index_bookings_on_training_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "issues", force: :cascade do |t|
+    t.bigint "ticket_id", null: false
+    t.string "solution"
+    t.boolean "status"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ticket_id"], name: "index_issues_on_ticket_id"
+    t.index ["user_id"], name: "index_issues_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "ticket_id", null: false
+    t.index ["ticket_id"], name: "index_reviews_on_ticket_id"
+  end
+
+  create_table "tickets", force: :cascade do |t|
+    t.boolean "status"
+    t.string "category"
+    t.string "url"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_tickets_on_user_id"
+  end
+
+  create_table "trainings", force: :cascade do |t|
+    t.datetime "date"
+    t.string "title"
+    t.string "category"
+    t.string "description"
+    t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -22,8 +70,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_28_132127) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "trainings"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "issues", "tickets"
+  add_foreign_key "issues", "users"
+  add_foreign_key "reviews", "tickets"
+  add_foreign_key "tickets", "users"
 end
