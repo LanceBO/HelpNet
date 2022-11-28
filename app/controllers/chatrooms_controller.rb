@@ -1,6 +1,7 @@
 class ChatroomsController < ApplicationController
   def show
     @chatroom = Chatroom.find(params[:chatroom_params])
+    @message = Message.new
   end
 
   private
