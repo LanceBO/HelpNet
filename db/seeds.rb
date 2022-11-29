@@ -12,7 +12,7 @@ Issue.destroy_all
 Ticket.destroy_all
 User.destroy_all
 
-user = User.create(email: "helpnet@gmail.com", password: "123456", first_name: "Xavier", last_name: "Clark")
+user = User.create(email: "helpnet@gmail.com", password: "123456", first_name: "Xavier", last_name: "Clark", helper: true, helper_status: true)
 
 training = Training.create(title: "Learn how to code", category: "code", description: "Hello World", price: 100)
 
