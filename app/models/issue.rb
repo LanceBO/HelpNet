@@ -1,4 +1,4 @@
 class Issue < ApplicationRecord
-  has_one_attached :ticket
+  belongs_to :ticket, optional: true
   belongs_to :user
 end
