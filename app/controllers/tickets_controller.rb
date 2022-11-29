@@ -6,22 +6,26 @@ class TicketsController < ApplicationController
 
   def create
     @ticket = Ticket.new(ticket_params)
+    @helper = User.where(helper: true, helper_status: true)
     @ticket.user = current_user
-
+    @ticket.helper = @helper
+    redirect_to_show
   end
 
   def show
     @ticket = Ticket.find(params[:id])
     @ticket.user = current_user
 
-
+    #liste des helpers qui va générer update (voir cours ce matin)
   end
 
+  def update
+  end
 
 private
 
   def ticket_params
-    params.require(:ticket).permit(:title, :description, :user_id)
+    params.require(:ticket).permit(:status, :url, :user_id, :category)
   end
 
 end
