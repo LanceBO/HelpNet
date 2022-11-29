@@ -20,4 +20,5 @@ booking = Booking.create(training: Training.last, user: User.last)
 
 ticket = Ticket.create(status: nil, category: "Email Send", url: "test url", user: User.last)
 
-issues = Issue.create(ticket: Ticket.last, solution: "Test Solution", status: nil, user: User.last)
+issues1 = Issue.create(ticket: Ticket.last, solution: "Material", status: nil, user: User.last)
+issues2 = Issue.create(ticket: Ticket.last, solution: "Internet", status: nil, user: User.last)
