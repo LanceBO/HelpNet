@@ -31,7 +31,7 @@ skip_before_action :authenticate_user!, only: :index
   def validate
     authorize @booking
   end
-  
+
   def show
     @booking = Booking.find(params[:booking_params])
     authorize @booking
