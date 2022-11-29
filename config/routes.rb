@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get "/chatroom", to: "chatrooms#show"
+  get "/ticket", to: "tickets#show"
   devise_for :users
   root to: "pages#home"
   resources :issues do
@@ -11,5 +12,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   resources :chatrooms, only: :show do
     resources :messages, only: :create
-  end 
+  end
 end
