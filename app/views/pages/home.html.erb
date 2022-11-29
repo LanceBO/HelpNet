@@ -1,4 +1,43 @@
-<h1>Anatole adore la navbar juste au-dessus</h1>
-<h1> . </h1>
-<h1> . </h1>
-<h1>N'hésitez pas à aller mettre à jour le TRELLO</h1>
+<div class="main col-10">
+  <h1>Résolvons ensemble </br> votre problème informatique</h1>
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+<!-- langage selector -->
+<nav role="navigation" class="fr-translate fr-nav">
+    <div class="fr-nav__item flex-row-reverse">
+        <button class="fr-translate__btn fr-btn fr-btn--tertiary" aria-controls="translate-1177" aria-expanded="false" title="Sélectionner une langue">
+            FR<span class="fr-hidden-lg"> - Français</span>
+        </button>
+        <div class="fr-collapse fr-translate__menu fr-menu" id="translate-1177">
+            <ul class="fr-menu__list">
+                <li>
+                    <a class="fr-translate__language fr-nav__link" hreflang="fr" lang="fr" href="#" aria-current="true">FR - Français</a>
+                </li>
+                <li>
+                    <a class="fr-translate__language fr-nav__link" hreflang="en" lang="en" href="#">EN - English</a>
+                </li>
+                <li>
+                    <a class="fr-translate__language fr-nav__link" hreflang="es" lang="es" href="#">ES - Español</a>
+                </li>
+                <li>
+                    <a class="fr-translate__language fr-nav__link" hreflang="de" lang="de" href="#">DE - Deutsch</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- -->
+  <div class="main-card">
+    <div class="card-content justify-content-left">
+      <h2 class="text-center">Veuillez sélectionner votre problème</h2>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </div>
+      <%= render "layouts/card-problem" %>
+  </div>
+  <div class="btn-next">
+    <button class="fr-btn fr-btn--icon-right fr-icon-arrow-right-s-line">Poursuivre</button>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
+
