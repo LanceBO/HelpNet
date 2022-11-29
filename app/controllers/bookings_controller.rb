@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-
 skip_before_action :authenticate_user!, only: :index
   def new
     @Training = Training.find(params[:training_id])
@@ -11,30 +10,28 @@ skip_before_action :authenticate_user!, only: :index
     @booking = Booking.new(booking_params)
     @training = Training.find(params[:food_id])
     @booking.user = current_user
-    @booking.food = @food
+    @booking.training = @training
     authorize @booking
     if @booking.save
-      flash[:notice] = "Successfully created booking."
+      flash[:notice] = "Votre réservation est un succès"
       redirect_to trainings_path
     else
       render :new
     end
-
   end
 
   def destroy
     @booking = Booking.find(params[:booking_params])
     @booking.destroy
     authorize @booking
-    flash[:success] = "Your training booking was successfully deleted."
+    flash[:success] = "Votre réservation a été supprimée"
     redirect_to bookings_url
   end
 
   def validate
     authorize @booking
   end
-
-
+  
   def show
     @booking = Booking.find(params[:booking_params])
     authorize @booking
@@ -58,20 +55,14 @@ skip_before_action :authenticate_user!, only: :index
     @trainings = Training.where(user: @user)
   end
 
-  def bag
-    @user = current_user
-    @bookings = Booking.where(user: @user)
-    authorize @bookings
-  end
-
   def approve
     @booking = Booking.find_by_id(params[:id])
-     @booking.update(state: "approved")
-     if @booking.state == "approved"
-       flash[:success] = "Booking successfully approved"
+     @booking.update(state: "approuvé")
+     if @booking.state == "approuvé"
+       flash[:success] = "Réservation approuvée"
        redirect_to bookings_path
      else
-       flash[:error] = "Booking not approved"
+       flash[:error] = "Réservation non-approuvée"
        redirect_to bookings_path
      end
   end
