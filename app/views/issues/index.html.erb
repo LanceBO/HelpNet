@@ -1,0 +1,7 @@
+<p> What is your pb ? </p>
+<% @issues.each do |issue| %>
+
+<h1><%= link_to issue.solution, issue_path(issue) %> </h1>
+
+<% end %>
+

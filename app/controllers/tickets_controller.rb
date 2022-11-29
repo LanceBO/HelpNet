@@ -4,6 +4,12 @@ class TicketsController < ApplicationController
     @tickets = Ticket.all
   end
 
+  def new
+    @issue = Issue.find(params[:ticket_id, :solution, :status, :user_id]
+    @ticket.user = current_user
+    @ticket.save
+  end
+
   def create
     @ticket = Ticket.new(ticket_params)
     @helper = User.where(helper: true, helper_status: true)

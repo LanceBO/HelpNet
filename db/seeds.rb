@@ -12,7 +12,8 @@ Issue.destroy_all
 Ticket.destroy_all
 User.destroy_all
 
-user = User.create(email: "helpnet@gmail.com", password: "123456", first_name: "Xavier", last_name: "Clark", helper: true, helper_status: true)
+
+user = User.create(email: "helpnet@gmail.com", password: "123456", first_name: "Xavier", last_name: "Clark", helper: false, helper_status: false )
 
 training = Training.create(title: "Learn how to code", category: "code", description: "Hello World", price: 100)
 
@@ -20,4 +21,5 @@ booking = Booking.create(training: Training.last, user: User.last)
 
 ticket = Ticket.create(status: nil, category: "Email Send", url: "test url", user: User.last)
 
-issues = Issue.create(ticket: Ticket.last, solution: "Test Solution", status: nil, user: User.last)
+issues1 = Issue.create(ticket: Ticket.last, solution: "Material", status: nil, user: User.last)
+issues2 = Issue.create(ticket: Ticket.last, solution: "Internet", status: nil, user: User.last)
