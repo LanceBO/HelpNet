@@ -25,6 +25,28 @@
   grid-gap: 16px;
 }
 
+@media (max-width: 992px) {
+  .logo-footer {
+    display: block;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  .footer-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-section {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .card-problem {
