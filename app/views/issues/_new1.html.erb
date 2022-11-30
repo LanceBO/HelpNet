@@ -1,0 +1,10 @@
+<div>
+  <% if issue.value == "Problème e-mail" %>
+       <%= simple_form_for [@user, @helper] do |f| %>
+      <%= f.input :subcategory, collection: Issue::SUBCATEGORIES%>
+      <button class="btn btn-primary"><%= f.button :submit %></button>
+    <% end %>
+  <% else %>
+    <%= "On est train de travailler dessus, t'inquiète" %>
+  <% end %>
+</div>

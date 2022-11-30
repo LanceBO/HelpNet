@@ -1,8 +1,7 @@
 <div class="first-content">
 "Hello bitches"
- <%# <%= simple_form_for [@user] do |f| %>
-      <%# <%= f.input :category, as: :text%> %>
-      <%# <%= f.input :category, as: :text %> %>
-      <%# <button class="btn btn-primary"><%= f.button :submit %></button> %>
-    <%# <% end %> %> %>
+ <%= simple_form_for [@user] do |f| %>
+      <%= f.input :category, collection: Issue::CATEGORIES%>
+      <button class="btn btn-primary"><%= f.button :submit %></button>
+    <% end %>
 </div>

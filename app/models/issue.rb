@@ -9,6 +9,4 @@ class Issue < ApplicationRecord
   validates :subcategory, presence: true, inclusion: { in: SUBCATEGORIES}
   validates :subsubcategory, presence: true, inclusion: { in: SUBSUBCATEGORIES}
 
-
-
 end
