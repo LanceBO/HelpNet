@@ -1,5 +1,10 @@
 <h2>Step3</h2>
 <p>
-  <%= f.label :new3 %><br />
-  <%= f.text_field :new3 %>
+  <%= simple_form_for @issue do |f| %>
+    <%= f.label :subsubcategory, collection: Issue::SUBSUBCATEGORIES %><br />
+    <%= f.text_field :subsubcategory %>
+    <button class="btn btn-primary"><%= f.button :submit %></button>
+  <% end %>
 </p>
+
+<p><%= link_to "Back to Step2", issues_path %></p>

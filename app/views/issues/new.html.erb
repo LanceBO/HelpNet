@@ -2,6 +2,6 @@
   <%= render "#{@issue.current_step}", :f => f %>
   <p><%= f.submit "Continue" %></p>
   <p><%= f.submit "Back", :name => "previous_button" unless @issue.first_step? %></p>
-<% end %>
+  <% end %>
 
 <p><%= link_to "Back to List", issues_path %></p>
