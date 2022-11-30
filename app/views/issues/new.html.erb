@@ -1,7 +1,8 @@
-<div class="first-content">
-"Hello bitches"
- <%= simple_form_for [@user] do |f| %>
-      <%= f.input :category, collection: Issue::CATEGORIES%>
-      <button class="btn btn-primary"><%= f.button :submit %></button>
-    <% end %>
-</div>
+
+<% form_for @issue do |f| %>
+  <%= render "#{@issue.current_step}", :f => f %>
+  <p><%= f.submit "Continue" %></p>
+  <p><%= f.submit "Back", :name => "previous_button" unless @issue.first_step? %></p>
+<% end %>
+
+<p><%= link_to "Back to List", issues_path %></p>
