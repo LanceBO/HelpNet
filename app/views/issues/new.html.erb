@@ -3,5 +3,6 @@
   <p><%= f.submit "Continue" %></p>
   <p><%= f.submit "Back", :name => "previous_button" unless @issue.first_step? %></p>
   <% end %>
+  <% @issue = Issue.create %>
 
 <p><%= link_to "Back to List", issues_path %></p>

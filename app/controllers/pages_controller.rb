@@ -3,4 +3,11 @@ class PagesController < ApplicationController
 
   def home
   end
+
+  def sub_email
+  end
+
+  def sub_internet
+  end
+
 end
