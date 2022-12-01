@@ -15,8 +15,9 @@ class Issue < ApplicationRecord
   validates_presence_of :new2, :if => lambda { |o| o.current_step == "new2" }
   validates_presence_of :new3, :if => lambda { |o| o.current_step == "new3" }
 
+
   def current_step
-    @current_step || steps.first
+    @current_step = steps.first
   end
 
   def steps

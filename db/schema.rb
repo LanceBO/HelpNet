@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_29_155833) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_01_101752) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -31,7 +31,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_29_155833) do
 
   create_table "issues", force: :cascade do |t|
     t.bigint "ticket_id"
-    t.string "solution"
     t.boolean "status"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
@@ -39,6 +38,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_29_155833) do
     t.string "category"
     t.string "subcategory"
     t.string "subsubcategory"
+    t.bigint "solution_id"
+    t.index ["solution_id"], name: "index_issues_on_solution_id"
     t.index ["ticket_id"], name: "index_issues_on_ticket_id"
     t.index ["user_id"], name: "index_issues_on_user_id"
   end
@@ -59,6 +60,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_29_155833) do
     t.datetime "updated_at", null: false
     t.bigint "ticket_id", null: false
     t.index ["ticket_id"], name: "index_reviews_on_ticket_id"
+  end
+
+  create_table "solutions", force: :cascade do |t|
+    t.string "videourl"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text "description"
+    t.string "title"
   end
 
   create_table "tickets", force: :cascade do |t|
@@ -100,6 +109,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_29_155833) do
 
   add_foreign_key "bookings", "trainings"
   add_foreign_key "bookings", "users"
+  add_foreign_key "issues", "solutions"
   add_foreign_key "issues", "tickets"
   add_foreign_key "issues", "users"
   add_foreign_key "messages", "chatrooms"
