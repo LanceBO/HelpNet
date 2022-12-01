@@ -1,0 +1,5 @@
+<% @trainings.each do |training| %>
+<ul>
+<li><%= link_to training.title, training_path(training) %></li>
+</ul>
+<% end %>

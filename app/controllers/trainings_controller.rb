@@ -3,5 +3,8 @@ class TrainingsController < ApplicationController
     @trainings = Training.all
   end
 
-  
+  def show
+    @training = Training.find(params[:id])
+  end
+
 end
