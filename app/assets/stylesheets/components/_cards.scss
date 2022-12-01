@@ -16,11 +16,53 @@
 }
 
 .pbcard {
-  margin-left: 0 1em;
+
+}
+
+.fr-tile--horizontal-md .fr-tile__img {
+  margin: 0;
+}
+
+.fr-tile--horizontal-md .fr-tile__body {
+  width: 100%;
+}
+
+.fr-tile__body {
+  display: block;
+  width: 20vw;
+  text-align: left;
+}
+
+.fr-tile__body h6 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+}
+
+.fr-tile__body p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 14px;
+}
+
+.title-step {
+  font-size: 32px;
+  margin-top: 0;
+}
+
+.pbcard a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .card-problem {
-  margin-top: 6em;
+  margin-top: 2em;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
