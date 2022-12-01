@@ -15,9 +15,9 @@ class IssuesController < ApplicationController
   def create
     @issue = Issue.new(issue_params)
     @issue.user = current_user
-    @issue.solution = Solution.find_by(problems: @issue.subsubcategory)
+   # @issue.solution = Solution.find_by(problems: @issue.subsubcategory)
     @issue.save
-    redirect_to issue_path(@issue)
+    redirect_to issues_path(@issue)
   end
 
   private

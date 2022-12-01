@@ -5,9 +5,11 @@ class TicketsController < ApplicationController
   end
 
   def new
-    @issue = Issue.find(params[:ticket_id, :solution, :status, :user_id]
+    @issue = Issue.find(params[:ticket_id, :solution, :status, :user_id])
     @ticket.user = current_user
     @ticket.save
+
+
   end
 
   def create
@@ -15,7 +17,9 @@ class TicketsController < ApplicationController
     @helper = User.where(helper: true, helper_status: true)
     @ticket.user = current_user
     @ticket.helper = @helper
-    redirect_to_show
+    api = Whereby::Api.new
+    api.create_meeting(end_date:Time.now+1.day)
+    redirect_to ticket_path(@ticket)
   end
 
   def show
@@ -27,12 +31,6 @@ class TicketsController < ApplicationController
 
   def update
   end
-
-  def visio
-    Whereby.configure do |config|
-    config.api_key = "Your api key!"
-      end
-    end
 
 private
 

@@ -1,7 +1,7 @@
 class Issue < ApplicationRecord
   belongs_to :ticket, optional: true
   belongs_to :user
-  belongs_to :solution
+  #belongs_to :solution
 
   CATEGORIES = ["Problème matériel", "Problème sur internet", "Problème e-mail"]
   SUBCATEGORIES = ["Je n'arrive pas à me connecter", "Je n'arrive à envoyer un e-mail", "Je ne reçois plus mes e-mails", "Problème avec une pièce jointe", "Je reçois beaucoup de SPAMS", "Je n'arrive pas à supprimer un e-mail"]
