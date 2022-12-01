@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get "/ticket", to: "tickets#show"
   get "/sub_email", to: "pages#sub_email"
   get "/sub_internet", to: "pages#sub_internet"
+  get "/solution", to: "solutions#index"
   devise_for :users
   root to: "pages#home"
   resources :issues do

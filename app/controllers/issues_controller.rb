@@ -5,6 +5,7 @@ class IssuesController < ApplicationController
 
   def show
     @issue = Issue.find(params[:id])
+    @solution = @issue.solution
   end
 
   def new
@@ -14,7 +15,9 @@ class IssuesController < ApplicationController
   def create
     @issue = Issue.new(issue_params)
     @issue.user = current_user
+    @issue.solution = Solution.find_by(problems: @issue.subsubcategory)
     @issue.save
+    redirect_to issue_path(@issue)
   end
 
   private
