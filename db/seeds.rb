@@ -11,6 +11,7 @@ Training.destroy_all
 Issue.destroy_all
 Ticket.destroy_all
 User.destroy_all
+Solution.destroy_all
 
 
 user = User.create(email: "helpnet@gmail.com", password: "123456", first_name: "Xavier", last_name: "Clark", helper: false, helper_status: false )
@@ -20,6 +21,5 @@ training = Training.create(title: "Learn how to code", category: "code", descrip
 booking = Booking.create(training: Training.last, user: User.last)
 
 ticket = Ticket.create(status: nil, category: "Email Send", url: "test url", user: User.last)
-
-issues1 = Issue.create(ticket: Ticket.last, solution: "Material", status: nil, user: User.last)
-issues2 = Issue.create(ticket: Ticket.last, solution: "Internet", status: nil, user: User.last)
+solution = Solution.create(videourl: "https://www.youtube.com/watch?v=8qXVk6Evx-w", title: "How to attach file to an email", description: "To attach a file to an email, bla bla bla", problems: "Ma pièce jointe jointe ne s'envoie pas")
+solution2 = Solution.create(videourl: "https://", title: "Blablabla", description: "blablabla", problems: "Je n'arrive pas à mettre jointe dans mon e-mail")
