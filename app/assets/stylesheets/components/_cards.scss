@@ -4,6 +4,7 @@
   padding: 4.875em;
   position: relative;
   margin-top: 4.875em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .card-content {
@@ -57,7 +58,7 @@
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .card-problem {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
