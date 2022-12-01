@@ -29,3 +29,14 @@
 
 <%= render "shared/footer" %>
 
+<script>
+const form = document.querySelector('.simple_form');
+
+const element = document.querySelectorAll('.form-check');
+element.forEach((element) => {
+  element.addEventListener("click", function () {
+  form.submit();
+});
+});
+
+</script>
