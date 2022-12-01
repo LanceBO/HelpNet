@@ -17,7 +17,8 @@ Solution.destroy_all
 user = User.create(email: "helpnet@gmail.com", password: "123456", first_name: "Xavier", last_name: "Clark", helper: false, helper_status: false )
 
 training = Training.create(title: "Learn how to code", category: "code", description: "Hello World", price: 100)
-
+training1 = Training.create(title: "PSG", category: "code", description: "This is the PSG show", price: 2000)
+training2 = Training.create(title: "Lens", category: "code", description: "This is the Lens show", price: 50)
 booking = Booking.create(training: Training.last, user: User.last)
 
 ticket = Ticket.create(status: nil, category: "Email Send", url: "test url", user: User.last)
