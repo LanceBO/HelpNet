@@ -24,7 +24,7 @@ class IssuesController < ApplicationController
     @issue.user = current_user
     @issue.solution = Solution.find_by(problems: @issue.subsubcategory)
     @issue.save
-    redirect_to issues_path(@issue)
+    redirect_to issue_path(@issue)
   end
 
   private
