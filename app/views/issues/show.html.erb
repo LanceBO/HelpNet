@@ -1,6 +1,73 @@
+<div class="main col-10">
+  <div class="main-card">
+  <div class="card-content">
+    <div class="fr-stepper mb-0">
+      <h2 class="fr-stepper__title mb-0">
+      <span class="fr-stepper__state">Étape 3 sur 3</span>
+      <h1 class="title-step">Utilisation des pièces jointes</h1>
+      </h2>
+      <div class="fr-stepper__steps" data-fr-current-step="3" data-fr-steps="3"></div>
+        <p class="fr-stepper__details">
+        <span class="fr-text--bold">Étape suivante :</span> Visio-conférence avec un Helper
+        </p>
+      </div>
+    </div>
 
+    <iframe width="100%" height="560" src=<%= @solution.videourl %> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+   <div class="fr-transcription">
+    <button class="fr-transcription__btn" aria-expanded="false" aria-controls="fr-transcription__collapse-transcription-1354">Transcription</button>
+    <div class="fr-collapse" id="fr-transcription__collapse-transcription-1354">
+        <dialog id="fr-transcription__modal-transcription-1354" class="fr-modal" role="dialog" aria-labelledby="fr-transcription__modal-transcription-1354-title">
+            <div class="fr-container fr-container--fluid fr-container-md">
+                <div class="fr-grid-row fr-grid-row--center">
+                    <div class="fr-col-12 fr-col-md-10 fr-col-lg-8">
+                        <div class="fr-modal__body">
+                            <div class="fr-modal__header">
+                                <button class="fr-btn--close fr-btn" aria-controls="fr-transcription__modal-transcription-1354" title="Fermer">
+                                    Fermer
+                                </button>
+                            </div>
+                            <div class="fr-modal__content">
+                                <h1 id="fr-transcription__modal-transcription-1354-title" class="fr-modal__title">
+                                    Titre de la vidéo
+                                </h1>
+                                <!-- données de test -->
+                            </div>
+                            <div class="fr-transcription__footer">
+                                <div class="fr-transcription__actions-group">
+                                    <button class="fr-btn fr-btn--fullscreen" aria-controls="fr-transcription__modal-transcription-1354" data-fr-opened="false" title="">
+                                        Agrandir
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+    </div>
+</div>
 
+    <div class="btn-solved text-center">
+    <%= link_to new_issue_path do %>
+      <button class="fr-btn fr-btn--icon-left fr-icon-checkbox-circle-line">Mon problème est résolu</button>
+    <% end %>
+    </div>
+  </div>
 
+  <%= link_to :back do %>
+  <div class="btn-prev">
+    <button class="fr-btn fr-btn--secondary">Retour</button>
+  </div>
+  <% end %>
 
-<iframe width="560" height="315" src=<%= @solution.videourl %> title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <%= link_to new_issue_path do %>
+  <div class="btn-next">
+    <span class="mr-3" style="color:#161616">Vous ne trouvez pas de solution à votre problème ? </span>
+    <button class="fr-btn fr-btn--icon-right fr-icon-arrow-right-s-line">Communiquer avec un Helper</button>
+  </div>
+  <% end %>
+</div>
+
+<%= render "shared/footer" %>
