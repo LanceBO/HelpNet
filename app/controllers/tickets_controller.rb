@@ -28,6 +28,12 @@ class TicketsController < ApplicationController
   def update
   end
 
+  def visio
+    Whereby.configure do |config|
+    config.api_key = "Your api key!"
+      end
+    end
+
 private
 
   def ticket_params
