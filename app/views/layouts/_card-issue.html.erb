@@ -1,0 +1,19 @@
+<div class="row">
+  <%= simple_form_for @issue do |f| %>
+    <%= f.input :subsubcategory, collection: Issue::SUBSUBCATEGORIES, as: :radio_buttons %>
+  <% end %>
+</div>
+
+
+
+<script>
+const form = document.querySelector('.simple_form');
+
+const element = document.querySelectorAll('.form-check');
+element.forEach((element) => {
+  element.addEventListener("click", function () {
+  form.submit();
+});
+});
+
+</script>
