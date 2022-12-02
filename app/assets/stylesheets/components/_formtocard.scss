@@ -9,11 +9,11 @@
   --hover: var(--background-default-grey-hover);
   --active: var(--background-default-grey-active);
   background-color: var(--background-default-grey);
-  box-shadow: inset 0 0 0 1px var(--border-default-grey),inset 0 -0.25rem 0 0 var(--border-plain-blue-france);
+  box-shadow: inset 0 0 0 1px var(--border-default-grey),inset 0 -0.25rem 0 0 #fff;
 }
 
 .form-check label {
-  padding: 6em;
+  padding: 4.6em;
 }
 
 legend {
