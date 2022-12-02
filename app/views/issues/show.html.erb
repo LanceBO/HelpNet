@@ -41,12 +41,12 @@
       <%= link_to new_issue_path do %>
         <button class="fr-btn fr-btn--icon-left fr-icon-checkbox-circle-line">Mon problème est résolu</button>
       <% end %>
-      <%= link_to new_issue_path do %>
         <div class="btn-next">
           <span style="color:#161616">Pas de solution à votre problème ? </span>
-          <button class="fr-btn fr-btn--icon-right fr-icon-arrow-right-s-line">Communiquer avec un Helper</button>
+          <div class="fr-btn fr-btn--icon-right fr-icon-arrow-right-s-line">
+          <%= button_to "Communiquer avec un Helper", test_path, form_class: "" %>
+          </div>
         </div>
-      <% end %>
     </div>
   </div>
 
