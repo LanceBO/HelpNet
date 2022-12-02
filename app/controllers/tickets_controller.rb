@@ -21,8 +21,14 @@ class TicketsController < ApplicationController
   end
 
   def show
-    @ticket = Ticket.find(params[:id])
+    @ticket = Ticket.find(params[:ticket_params])
     @ticket.user = current_user
+    url = "https://api.whereby.dev/v1/meetings"
+    header = {"Authorization": "Bearer #{ENV['WHEREBY_API_KEY']}", "Content-Type": "application/json"}
+    body = {"endDate": "#{Time.now + 1.day}"}
+    RestClient.post(url, body, header) { |response, request, result|
+      p JSON.parse(response.body)
+    }
 
 
     #liste des helpers qui va générer update (voir cours ce matin)
