@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
   get "/chatroom", to: "chatrooms#show"
-  get "/ticket", to: "tickets#show"
   get "/sub_email", to: "pages#sub_email"
   get "/sub_internet", to: "pages#sub_internet"
   get "/solution", to: "solutions#index"
+  get "/tickets/:id", to: "tickets#show", as: "ticket"
+  post "/tickets", to: "tickets#create", as: "test"
   devise_for :users
   root to: "pages#home"
   resources :issues do
-    resources :tickets
+    #resources :tickets, except: :create
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

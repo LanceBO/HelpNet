@@ -64,12 +64,12 @@
   </div>
   <% end %>
 
-  <%= link_to new_issue_path do %>
+
   <div class="btn-next">
     <span class="mr-3" style="color:#161616">Vous ne trouvez pas de solution à votre problème ? </span>
-    <button class="fr-btn fr-btn--icon-right fr-icon-arrow-right-s-line">Communiquer avec un Helper</button>
+     <%= button_to "Communiquer avec un Helper", test_path, form_class: "fr-btn fr-btn--icon-right fr-icon-arrow-right-s-line" %>
   </div>
-  <% end %>
+
 </div>
 
 <%= render "shared/footer" %>
