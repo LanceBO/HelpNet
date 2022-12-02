@@ -1,6 +1,12 @@
 .btn-next {
   float: right;
-  margin-top: 24px;
+  display: grid;
+  position: relative;
+  bottom: 20px;
+}
+
+.btn-next span {
+  font-size: 14px;
 }
 
 .btn-prev {
@@ -8,14 +14,36 @@
   margin-top: 24px;
 }
 
-.btn-solved {
-  margin-top: 4em;
+.btn-card-bot {
+  margin-top: 6em;
+  margin-bottom: 1em;
 }
 
-.btn-solved a {
+.btn-card-bot a {
   text-decoration: none;
 }
 
 .deletenavbar a {
   text-decoration: none;
+}
+
+.btn-video {
+  position: absolute;
+}
+
+.minitext {
+  font-size: 10px;
+  margin: 0;
+}
+
+.minitext p {
+  font-size: 13px;
+}
+
+.minitext svg {
+  width: 30px;
+}
+
+.btn-fullscreen {
+
 }
