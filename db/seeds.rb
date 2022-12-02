@@ -15,7 +15,8 @@ Solution.destroy_all
 
 
 user = User.create(email: "helpnet@gmail.com", password: "123456", first_name: "Xavier", last_name: "Clark", helper: false, helper_status: false )
-
+helper = User.create(email: "helper@gmail.com", password: "123456", first_name: "Helper", last_name: "Help", helper: true, helper_status: true )
+helper2 = User.create(email: "helper2@gmail.com", password: "123456", first_name: "Helper2", last_name: "Help2", helper: true, helper_status: true )
 training = Training.create(title: "Learn how to code", category: "code", description: "Hello World", price: 100)
 training1 = Training.create(title: "PSG", category: "code", description: "This is the PSG show", price: 2000)
 training2 = Training.create(title: "Lens", category: "code", description: "This is the Lens show", price: 50)
