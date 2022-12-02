@@ -1,5 +1,30 @@
+<%= render "shared/delete-navbar" %>
 
-<iframe
-  src="https://help-net.whereby.com/2b52ee8b-43b4-4109-ab37-648590f68dd8"
-  allow="camera; microphone; fullscreen; speaker; display-capture; autoplay"
-></iframe>
+<div class="main col-10">
+  <div class="main-card">
+  <div class="card-content">
+    <div class="fr-stepper mb-0">
+      <h1 class="title-step">Visio-conférence avec un Helper</h1>
+      </div>
+    </div>
+
+    <div class="whereby">
+      <iframe width="100%" height="500" src="https://help-net.whereby.com/2b52ee8b-43b4-4109-ab37-648590f68dd8" allow="camera; microphone; fullscreen; speaker; display-capture; autoplay" data-dashlane-frameid="19021">
+      </iframe>
+    </div>
+
+<div class="btn-card-bot text-center">
+      <%= link_to new_issue_path do %>
+        <button class="fr-btn fr-btn--icon-left fr-icon-checkbox-circle-line">Mon problème est résolu</button>
+      <% end %>
+</div>
+  </div>
+
+  <%= link_to :back do %>
+  <div class="btn-prev">
+    <button class="fr-btn fr-btn--secondary">Retour</button>
+  </div>
+  <% end %>
+</div>
+
+<%= render "shared/footer" %>
