@@ -1,11 +1,23 @@
-<%= @training.title %>
-<%= @training.description %>
-  <%= image_tag @training.image, width: "500",  alt:"image débutant" %>
-
-
-
-<%= simple_form_for [@training, @booking] do |f| %>
-      <%= f.input :start_date, as: :date %>
-      <%= f.input :end_date, as: :date %>
-      <button class="btn btn-primary"><%= f.button :submit %></button>
+<div class="main col-10">
+  <div class="main-card">
+    <%= link_to "/trainings" do %>
+      <button class="fr-btn fr-btn--icon-left fr-btn--secondary fr-icon-home-4-line">Retour à la page d'accueil</button>
     <% end %>
+    <div class="card-content">
+      <div class="fr-stepper mb-0">
+        <%= image_tag @training.image, width: "500",  alt:"image débutant" %>
+        <h1><%= @training.title %></h1>
+        <p><%= @training.description %></p>
+
+        <%= simple_form_for [@training, @booking] do |f| %>
+          <%= f.input :start_date, as: :date %>
+          <%= f.input :end_date, as: :date %>
+          <button class="btn btn-primary"><%= f.button :submit %></button>
+         <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
