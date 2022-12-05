@@ -1,0 +1,7 @@
+<h1>Bonjour <%= @user.first_name %></h1>
+<ul><% @bookings.each do |booking| %>
+<li><%= booking.training.title %></li>
+<%= booking.start_date %>
+<%= booking.end_date %>
+<% end %>
+</ul>

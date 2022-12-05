@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "/sub_internet", to: "pages#sub_internet"
   get "/solution", to: "solutions#index"
   get "/tickets/:id", to: "tickets#show", as: "ticket"
+  get "/dashboard", to: "bookings#dashboard"
   post "/tickets", to: "tickets#create", as: "test"
   devise_for :users
   root to: "pages#home"
@@ -14,7 +15,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  resources :trainings
+  resources :trainings do
+    resources :bookings
+  end
   resources :chatrooms, only: :show do
     resources :messages, only: :create
   end

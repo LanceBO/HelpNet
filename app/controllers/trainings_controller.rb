@@ -5,6 +5,7 @@ class TrainingsController < ApplicationController
 
   def show
     @training = Training.find(params[:id])
+    @booking = Booking.new
   end
 
 end

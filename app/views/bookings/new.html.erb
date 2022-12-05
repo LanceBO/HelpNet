@@ -1,9 +1,3 @@
-<%= @training.title %>
-<%= @training.description %>
-  <%= image_tag @training.image, width: "500",  alt:"image débutant" %>
-
-
-
 <%= simple_form_for [@training, @booking] do |f| %>
       <%= f.input :start_date, as: :date %>
       <%= f.input :end_date, as: :date %>
