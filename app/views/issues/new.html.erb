@@ -33,8 +33,8 @@
 <%= render "shared/footer" %>
 
 <script>
-  const formcard = document.querySelector('.simple_form');
-  const element = document.querySelectorAll('.form-check');
+  let formcard = document.querySelector('.simple_form');
+  let element = document.querySelectorAll('.form-check');
   element.forEach((element) => {
   element.addEventListener("click", function () {
     formcard.submit();
