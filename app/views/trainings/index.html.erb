@@ -1,5 +1,19 @@
-<% @trainings.each do |training| %>
-<ul>
-<li><%= link_to training.title, training_path(training) %></li>
-</ul>
-<% end %>
+<div class="main col-10">
+  <div class="main-card">
+  <div class="card-content">
+    <div class="fr-stepper mb-0">
+      <h1 class="title-step">Formations</h1>
+      </div>
+    </div>
+    <%= render "layouts/card-training" %>
+  </div>
+
+  <%= link_to :back do %>
+  <div class="btn-prev">
+    <button class="fr-btn fr-btn--secondary">Retour</button>
+  </div>
+  <% end %>
+
+</div>
+
+<%= render "shared/footer" %>
