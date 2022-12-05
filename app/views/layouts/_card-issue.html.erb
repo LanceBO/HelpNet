@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" data-controller="simpleformcards" data-action="simpleformcards#formcard">
   <%= simple_form_for @issue do |f| %>
     <%= f.input :subsubcategory, collection: Issue::SUBSUBCATEGORIES, as: :radio_buttons %>
   <% end %>

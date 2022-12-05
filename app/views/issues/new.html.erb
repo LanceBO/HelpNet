@@ -23,21 +23,5 @@
     <button class="fr-btn fr-btn--secondary">Retour</button>
   </div>
   <% end %>
-  <!-- bouton next
-  <%= link_to new_issue_path do %>
-  <div class="btn-next">
-    <button class="fr-btn fr-btn--icon-right fr-icon-arrow-right-s-line">Poursuivre</button>
-  </div>
-  <% end %>-->
 </div>
 <%= render "shared/footer" %>
-
-<script>
-  let formcard = document.querySelector('.simple_form');
-  let element = document.querySelectorAll('.form-check');
-  element.forEach((element) => {
-  element.addEventListener("click", function () {
-    formcard.submit();
-    });
-  });
-</script>
