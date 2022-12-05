@@ -3,10 +3,75 @@
   <div class="card-content">
     <div class="fr-stepper mb-0">
       <h1 class="title-step">Formations disponibles</h1>
-      <p>Vous avez un problème sur votre ordinateur ? Nous sommes là pour vous aider.<br>Si vous n'arrivez toujours pas à le résoudre, n'hésitez pas à communiquer avec l'un de nos Assistants.</p>
+      <p>Vous débutez dans votre apprentissage de l'informatique ? Nos formations sont faites pour vous ! Vous apprendrez tout sur les usages du numérique.</br>Depuis l'achat et l'utilisation de votre matériel (ordinateur, tablette, smartphone) jusqu'à la prise en main des logiciels (gestion de documents, internet, messagerie, sécurité, ...)</p>
       </div>
     </div>
     <%= render "layouts/card-training" %>
+
+    <!-- pagination -->
+
+    <nav role="navigation" class="fr-pagination" aria-label="Pagination">
+    <ul class="fr-pagination__list">
+        <li>
+            <a class="fr-pagination__link fr-pagination__link--first" aria-disabled="true" role="link">
+                Première page
+            </a>
+        </li>
+        <li>
+            <a class="fr-pagination__link fr-pagination__link--prev fr-pagination__link--lg-label" aria-disabled="true" role="link">
+                Page précédente
+            </a>
+        </li>
+        <li>
+            <a class="fr-pagination__link" aria-current="page" title="Page 1">
+                1
+            </a>
+        </li>
+        <li>
+            <a class="fr-pagination__link" href="#" title="Page 2">
+                2
+            </a>
+        </li>
+        <li>
+            <a class="fr-pagination__link fr-displayed-lg" href="#" title="Page 3">
+                3
+            </a>
+        </li>
+        <li>
+            <a class="fr-pagination__link fr-displayed-lg">
+                …
+            </a>
+        </li>
+        <li>
+            <a class="fr-pagination__link fr-displayed-lg" href="#" title="Page 130">
+                10
+            </a>
+        </li>
+        <li>
+            <a class="fr-pagination__link fr-displayed-lg" href="#" title="Page 131">
+                11
+            </a>
+        </li>
+        <li>
+            <a class="fr-pagination__link" href="#" title="Page 132">
+                12
+            </a>
+        </li>
+        <li>
+            <a class="fr-pagination__link fr-pagination__link--next fr-pagination__link--lg-label" href="#">
+                Page suivante
+            </a>
+        </li>
+        <li>
+            <a class="fr-pagination__link fr-pagination__link--last" href="#">
+                Dernière page
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<!-- -->
+
   </div>
 
   <%= link_to :back do %>
