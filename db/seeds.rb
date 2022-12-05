@@ -23,5 +23,5 @@ training2 = Training.create(title: "Lens", category: "code", description: "This 
 booking = Booking.create(training: Training.last, user: User.last)
 
 ticket = Ticket.create(status: nil, category: "Email Send", url: "test url", user: User.last)
-solution = Solution.create(videourl: "https://www.youtube.com/embed/vhxLsok_9MM?rel=0&cc_load_policy=1", title: "How to attach file to an email", description: "To attach a file to an email, bla bla bla", problems: "Ma pièce jointe jointe ne s'envoie pas")
-solution2 = Solution.create(videourl: "https://www.youtube.com/embed/vhxLsok_9MM?rel=0&cc_load_policy=1", title: "Blablabla", description: "blablabla", problems: "Je n'arrive pas à mettre jointe dans mon e-mail")
+solution = Solution.create(videourl: "https://www.youtube.com/embed/vhxLsok_9MM?rel=0&cc_load_policy=1", title: "How to attach file to an email", description: "To attach a file to an email, bla bla bla", problems: "Ma pièce jointe ne s'envoie pas")
+solution2 = Solution.create(videourl: "https://www.youtube.com/embed/vhxLsok_9MM?rel=0&cc_load_policy=1", title: "Blablabla", description: "blablabla", problems: "Je n'arrive pas à mettre une pièce jointe dans mon e-mail")
