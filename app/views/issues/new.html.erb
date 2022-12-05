@@ -17,17 +17,6 @@
 
     <%= render "layouts/card-issue" %>
 
-    <!-- load script before footer to avoid bug -->
-    <script>
-      const form = document.querySelector('.simple_form');
-      const element = document.querySelectorAll('.form-check');
-      element.forEach((element) => {
-      element.addEventListener("click", function () {
-        form.submit();
-        });
-      });
-    </script>
-
   </div>
   <%= link_to :back do %>
   <div class="btn-prev">
@@ -42,3 +31,13 @@
   <% end %>-->
 </div>
 <%= render "shared/footer" %>
+
+<script>
+  const formcard = document.querySelector('.simple_form');
+  const element = document.querySelectorAll('.form-check');
+  element.forEach((element) => {
+  element.addEventListener("click", function () {
+    formcard.submit();
+    });
+  });
+</script>
