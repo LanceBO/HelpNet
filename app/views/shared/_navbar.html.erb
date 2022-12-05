@@ -24,14 +24,21 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-           <li class="nav-item">
-            <button class="fr-btn fr-btn--secondary">À propos</button>
-          </li>
           <li class="nav-item">
+          <%= link_to trainings_path do %>
             <button class="fr-btn fr-btn--secondary">Formations</button>
+            <% end %>
+          </li>
+             <li class="nav-item">
+          <%= link_to dashboard_path do %>
+            <button class="fr-btn fr-btn--secondary">Mes Formations</button>
+            <% end %>
           </li>
           <li class="nav-item">
             <button class="fr-btn fr-btn--secondary">Devenir Helper</button>
+          </li>
+           <li class="nav-item">
+            <button class="fr-btn fr-btn--secondary">À propos</button>
           </li>
         <% else %>
           <li class="nav-item">

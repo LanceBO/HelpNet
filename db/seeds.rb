@@ -14,12 +14,13 @@ User.destroy_all
 Solution.destroy_all
 
 
-user = User.create(email: "helpnet@gmail.com", password: "123456", first_name: "Xavier", last_name: "Clark", helper: false, helper_status: false )
+user = User.create(email: "helpnet@gmail.com", password: "123456", first_name: "René", last_name: "Clark", helper: false, helper_status: false )
 helper = User.create(email: "helper@gmail.com", password: "123456", first_name: "Helper", last_name: "Help", helper: true, helper_status: true )
 helper2 = User.create(email: "helper2@gmail.com", password: "123456", first_name: "Helper2", last_name: "Help2", helper: true, helper_status: true )
-training = Training.create(title: "Learn how to code", category: "code", description: "Hello World", price: 100)
-training1 = Training.create(title: "PSG", category: "code", description: "This is the PSG show", price: 2000)
-training2 = Training.create(title: "Lens", category: "code", description: "This is the Lens show", price: 50)
+training = Training.create(title: "Comment Utiliser Gmail", category: "email", description: "Ce cours de base sur Gmail vous apprendra à utiliser le service de messagerie de Google. Vous apprendrez à créer un compte Gmail, à envoyer et recevoir des messages et à organiser votre boîte de réception.", price: 25, image: "gmail-logo.png")
+training1 = Training.create(title: " Comprendre les paramètres de sécurité de Gmail", category: "email", description: "Apprenez à configurer et à gérer les paramètres de sécurité de votre compte Gmail.", price: 25, image: "gmail-logo.png")
+training2 = Training.create(title: "Utiliser les outils de productivité de Gmail", category: "email", description: "Découvrez comment utiliser les outils de productivité de Gmail pour améliorer votre productivité.", price: 30, image: "gmail-logo.png")
+training3 = Training.create(title: "Utiliser Gmail pour le travail", category: "email", description: "Découvrez comment utiliser Gmail pour améliorer votre productivité et votre efficacité au travail.", price: 30, image: "gmail-logo.png")
 booking = Booking.create(training: Training.last, user: User.last)
 
 ticket = Ticket.create(status: nil, category: "Email Send", url: "test url", user: User.last)
