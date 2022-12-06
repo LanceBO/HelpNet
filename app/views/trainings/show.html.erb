@@ -5,81 +5,80 @@
   <div class="main-card">
         <%= image_tag @training.image, width: "100%",  alt:"image débutant", class:"imgcover" %>
         <div class="card-show-training">
-        <div class="training-comp">
+        <div class="training-comp details">
           <h1><%= @training.title %></h1>
           <p><%= @training.description %></p>
           <%= simple_form_for [@training, @booking] do |f| %>
-            <!-- <%= f.input :start_date, as: :date %>
-            <%= f.input :end_date, as: :date %>-->
             <div class="fr-btn fr-btn--icon-right m-0 p-0">
             <button><%= f.button :submit, "M'inscrire à la formation" %></button>
             </div>
           <% end %>
         </div>
         <div class="training-comp cals">
-        <main class="calcard">
-    <section class="calcard__header">
-      <h5>Mardi 7 janvier</h5>
-      <h5>2022</h5>
-    </section>
-    <section class="calcard__body">
-      <ul class="calcard__body--days">
-        <li>lun</li>
-        <li>mar</li>
-        <li>mer</li>
-        <li>jeu</li>
-        <li>ven</li>
-        <li>sam</li>
-        <li>dim</li>
-      </ul>
-      <ul class="calcard__body--dates">
-        <li class="prev">30</li>
-        <li class="prev">31</li>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-        <li>6</li>
-        <li class="active">7</li>
-        <li>8</li>
-        <li>9</li>
-        <li>10</li>
-        <li>11</li>
-        <li>12</li>
-        <li>13</li>
-        <li>14</li>
-        <li>15</li>
-        <li>16</li>
-        <li>17</li>
-        <li>18</li>
-        <li>19</li>
-        <li>20</li>
-        <li>21</li>
-        <li>22</li>
-        <li>23</li>
-        <li>24</li>
-        <li>25</li>
-        <li>26</li>
-        <li>27</li>
-        <li>28</li>
-        <li>29</li>
-        <li>30</li>
-        <li>31</li>
-        <li class="next">1</li>
-        <li class="next">2</li>
-      </ul>
-    </section>
-  </main>
+            <main class="calcard">
+            <section class="calcard__header">
+              <h4>Jour de la formation :</h4>
+              <h5>Mardi 7 janvier</h5>
+              <h5>2022</h5>
+            </section>
+            <section class="calcard__body">
+              <ul class="calcard__body--days">
+                <li>lun</li>
+                <li>mar</li>
+                <li>mer</li>
+                <li>jeu</li>
+                <li>ven</li>
+                <li>sam</li>
+                <li>dim</li>
+              </ul>
+              <ul class="calcard__body--dates">
+                <li class="prev">30</li>
+                <li class="prev">31</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li class="active">7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+                <li>16</li>
+                <li>17</li>
+                <li>18</li>
+                <li>19</li>
+                <li>20</li>
+                <li>21</li>
+                <li>22</li>
+                <li>23</li>
+                <li>24</li>
+                <li>25</li>
+                <li>26</li>
+                <li>27</li>
+                <li>28</li>
+                <li>29</li>
+                <li>30</li>
+                <li>31</li>
+                <li class="next">1</li>
+                <li class="next">2</li>
+              </ul>
+            </section>
+          </main>
+          <h4 class="mt-5">Lieu de la formation :</h4>
+          <div style="width: 100%; height: 200px;"
+            data-controller="map"
+            data-map-markers-value="<%= @markers.to_json %>"
+            data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
 <%= render "shared/footer" %>
-
-<div style="width: 100%; height: 600px;"
-      data-controller="map"
-      data-map-markers-value="<%= @markers.to_json %>"
-      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>

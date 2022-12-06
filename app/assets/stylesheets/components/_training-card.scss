@@ -1,0 +1,19 @@
+.details {
+  height: 23em !important;
+}
+
+.trainings {
+  margin-top: 5em;
+}
+
+.solved {
+  margin-top: 5em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  color: rgb(5, 120, 5);
+
+  & h1 {
+    color: rgb(5, 120, 5);
+  }
+}

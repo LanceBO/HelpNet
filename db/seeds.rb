@@ -21,7 +21,7 @@ training = Training.create(title: "Comment Utiliser Gmail", category: "email", d
 training1 = Training.create(title: " Comprendre les paramètres de sécurité de Gmail", category: "email", description: "Apprenez à configurer et à gérer les paramètres de sécurité de votre compte Gmail.", price: 25, image: "gmail-securite.jpg")
 training2 = Training.create(title: "Utiliser les outils de productivité de Gmail", category: "email", description: "Découvrez comment utiliser les outils de productivité de Gmail pour améliorer votre productivité.", price: 30, image: "gmail-productivite.png")
 training3 = Training.create(title: "Utiliser Gmail pour le travail", category: "email", description: "Découvrez comment utiliser Gmail pour améliorer votre productivité et votre efficacité au travail.", price: 30, image: "gmail-travail.jpg")
-training4 = Training.create(title: "Après Gmail, je débute avec Google Workspace", category: "email", description: "Découvrez les outils liés à votre comtpe Gmail grâce à la plateforme Google Workspace", price: 40, image: "google-workspace.jpg", address: "16 villa Gaudelet, Paris")
+training11 = Training.create(title: "Après Gmail, je débute avec Google Workspace", category: "email", description: "Découvrez les outils liés à votre comtpe Gmail grâce à la plateforme Google Workspace", price: 40, image: "google-workspace.jpg", address: "16 villa Gaudelet, Paris")
 training5 = Training.create(title: "Quelles sont les alternatives à Gmail", category: "email", description: "Gmail ne convient pas ? Grâce à cette formation vous aurez une liste exhaustive des outils similaires à Gmail, perme ", price: 30, image: "gmail-alternatives.jpg")
 booking = Booking.create(training: Training.last, user: User.last)
 
