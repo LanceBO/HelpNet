@@ -1,0 +1,87 @@
+.calcard {
+    background: $white;
+    width: 90%;
+    display: grid;
+    grid-template-rows: 4rem auto 0rem;
+
+    &__header {
+        padding: 0 1.25rem;
+        color: $calgray;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__body {
+        padding: 1.5rem 1.5rem;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+
+        &--days {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 4rem;
+            list-style-type: none;
+            padding-left: 0rem;
+
+            li {
+                flex: 1;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-align: center;
+                color: $calgray;
+                margin: 0 1px;
+            }
+        }
+        &--dates {
+            display: grid;
+            gap: 3px;
+            grid-template-columns: repeat(7, 1fr);
+            justify-items: center;
+            text-align: center;
+            padding-left: 0rem;
+            li {
+                width: 2.5rem;
+                height: 2.5rem;
+                display: grid;
+                place-items: center;
+                font-weight: bold;
+                position: relative;
+            }
+            li.prev,
+            li.next {
+                color: #ccc;
+            }
+            li.active {
+                background: $blue-france;
+                color: $white;
+                border-radius: $radius;
+            }
+            li.circle {
+                border: 2px solid;
+                border-radius: $radius;
+                span {
+                    position: absolute;
+                    top: -0.75rem;
+                    right: -0.5rem;
+                    width: 1.75rem;
+                    height: 1.75rem;
+                    color: $white;
+                    border-radius: $radius;
+                }
+            }
+            .circle.blue {
+                border-color: $blue-france;
+                span {
+                    background: $blue-france;
+                }
+            }
+            .circle.purple {
+                border-color: $calpurple;
+                span {
+                    background: $calpurple;
+                }
+            }
+        }
+    }
+}

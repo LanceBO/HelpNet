@@ -10,6 +10,10 @@ application.register("hello", HelloController)
 import MapController from "./map_controller"
 application.register("map", MapController)
 
+import ScrollelementController from "./scrollelement_controller"
+application.register("scrollelement", ScrollelementController)
+
+
 import SimpleformcardsController from "./simpleformcards_controller"
 application.register("simpleformcards", SimpleformcardsController)
 
