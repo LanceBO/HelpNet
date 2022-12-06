@@ -7,16 +7,8 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.card-content {
-
-}
-
 .content a {
   text-decoration: none;
-}
-
-.card-problem {
-  margin-top: 6em;
 }
 
 .card-training .pbcard {
@@ -92,7 +84,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  box-sizing: border-box;
   margin-top: 2em;
 }
 
@@ -103,8 +94,12 @@
   transition: .3s all ease-in;
 }
 
+.fr-card__img {
+  width: 100%;
+}
+
 .card-training .fr-card__img img {
-  width: 25vw;
+  width: inherit;
 }
 
 .fr-card:not(.fr-card--no-border):not(.fr-card--shadow) {

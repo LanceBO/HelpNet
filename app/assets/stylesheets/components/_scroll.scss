@@ -1,0 +1,24 @@
+.slideUp {
+  animation-name: slideUp;
+  animation-duration: 2s;
+}
+
+.slideUponLoad {
+  animation-name: slideUp;
+  animation-duration: 2s;
+}
+
+.pbcard.scroll {
+  opacity: 0;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
