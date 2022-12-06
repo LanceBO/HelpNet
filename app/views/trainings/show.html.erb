@@ -8,7 +8,6 @@
         <div class="training-comp">
           <h1><%= @training.title %></h1>
           <p><%= @training.description %></p>
-
           <%= simple_form_for [@training, @booking] do |f| %>
             <!-- <%= f.input :start_date, as: :date %>
             <%= f.input :end_date, as: :date %>-->
@@ -18,7 +17,6 @@
           <% end %>
         </div>
         <div class="training-comp cals">
-
         <main class="calcard">
     <section class="calcard__header">
       <h5>Mardi 7 janvier</h5>
@@ -73,13 +71,15 @@
       </ul>
     </section>
   </main>
-
-
-
         </div>
-
+      </div>
     </div>
   </div>
 </div>
-
 <%= render "shared/footer" %>
+
+    <div style="width: 100%; height: 600px;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>

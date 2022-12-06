@@ -1,3 +1,4 @@
 class Training < ApplicationRecord
-  has_many :bookings
+  after_validation :geocode, if: :will_save_change_to_address?
+  geocoded_by :address
 end
