@@ -11,9 +11,11 @@
 
         <%= simple_form_for [@training, @booking] do |f| %>
           <%= f.input :start_date, as: :date %>
-          <%= f.input :end_date, as: :date %>
-          <button class="btn btn-primary"><%= f.button :submit %></button>
+          <%= f.input :start_date, as: :time %>
+          <button class="btn btn-primary"><%= f.button :submit, "Je m'inscris" %></button>
          <% end %>
+
+    
 
       </div>
     </div>
