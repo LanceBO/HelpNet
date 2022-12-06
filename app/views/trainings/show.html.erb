@@ -1,21 +1,83 @@
 <div class="main col-10">
+<%= link_to "/trainings" do %>
+<button class="fr-btn fr-btn--icon-left fr-btn--secondary fr-icon-arrow-left-s-line">Retour aux formations</button>
+<% end %>
   <div class="main-card">
-    <%= link_to "/trainings" do %>
-      <button class="fr-btn fr-btn--icon-left fr-btn--secondary fr-icon-home-4-line">Retour à la page d'accueil</button>
-    <% end %>
-    <div class="card-content">
-      <div class="fr-stepper mb-0">
-        <%= image_tag @training.image, width: "500",  alt:"image débutant" %>
-        <h1><%= @training.title %></h1>
-        <p><%= @training.description %></p>
+        <%= image_tag @training.image, width: "100%",  alt:"image débutant", class:"imgcover" %>
+        <div class="card-show-training">
+        <div class="training-comp">
+          <h1><%= @training.title %></h1>
+          <p><%= @training.description %></p>
 
-        <%= simple_form_for [@training, @booking] do |f| %>
-          <%= f.input :start_date, as: :date %>
-          <%= f.input :end_date, as: :date %>
-          <button class="btn btn-primary"><%= f.button :submit %></button>
-         <% end %>
+          <%= simple_form_for [@training, @booking] do |f| %>
+            <!-- <%= f.input :start_date, as: :date %>
+            <%= f.input :end_date, as: :date %>-->
+            <div class="fr-btn fr-btn--icon-right m-0 p-0">
+            <button><%= f.button :submit, "M'inscrite à la formation" %></button>
+            </div>
+          <% end %>
+        </div>
+        <div class="training-comp cals">
 
-      </div>
+        <main class="calcard">
+    <section class="calcard__header">
+      <h5>Mardi 7 janvier</h5>
+      <h5>2022</h5>
+    </section>
+    <section class="calcard__body">
+      <ul class="calcard__body--days">
+        <li>lun</li>
+        <li>mar</li>
+        <li>mer</li>
+        <li>jeu</li>
+        <li>ven</li>
+        <li>sam</li>
+        <li>dim</li>
+      </ul>
+      <ul class="calcard__body--dates">
+        <li class="prev">30</li>
+        <li class="prev">31</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li class="active">7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+        <li>31</li>
+        <li class="next">1</li>
+        <li class="next">2</li>
+      </ul>
+    </section>
+  </main>
+
+
+
+        </div>
+
     </div>
   </div>
 </div>
