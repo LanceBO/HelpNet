@@ -12,6 +12,10 @@
   box-shadow: inset 0 0 0 1px var(--border-default-grey),inset 0 -0.25rem 0 0 #fff;
 }
 
+.form-check:hover {
+  background-color: var(--hover);
+}
+
 .form-check label {
   padding: 4.6em;
 }
