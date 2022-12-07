@@ -1,5 +1,6 @@
 class TrainingsController < ApplicationController
   def index
+    @user = current_user
     @trainings = Training.all
     @markers = @trainings.geocoded.map do |training|
       {

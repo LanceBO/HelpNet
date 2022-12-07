@@ -1,13 +1,15 @@
 <div class="main col-10">
   <div class="main-card">
   <div class="card-content">
-    <div class="fr-stepper mb-0">
-      <h1 class="title-step">Formations disponibles</h1>
-      <p>Vous débutez dans votre apprentissage de l'informatique ? Nos formations sont faites pour vous ! Vous apprendrez tout sur les usages du numérique.</br>Depuis l'achat et l'utilisation de votre matériel (ordinateur, tablette, smartphone) jusqu'à la prise en main des logiciels (gestion de documents, internet, messagerie, sécurité, ...)</p>
+    <div class="fr-stepper mb-0 solved">
+      <span class="fr-icon-success-line" aria-hidden="true"></span>
+      <h1 class="title-step">Félicitations <%= @user.first_name %>, votre problème est résolu !</h1>
       </div>
     </div>
-    <%= render "layouts/card-training" %>
-
+    <div class="trainings">
+      <h4> Quelques formations qui pourraient vous intéresser...</h4>
+      <%= render "layouts/card-training" %>
+    </div>
     <!-- pagination -->
 
     <nav role="navigation" class="fr-pagination" aria-label="Pagination">
