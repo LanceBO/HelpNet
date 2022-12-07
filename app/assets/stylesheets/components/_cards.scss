@@ -114,6 +114,12 @@
   -webkit-box-orient: vertical;
 }
 
+.fr-enlarge-link:hover {
+  cursor: auto;
+  cursor: pointer;
+  box-shadow: 0px 4px 0px $blue-france;
+}
+
 /** overpatch bootstrap **/
 .fr-btns-group--inline-lg {
   padding-left: 0px;
