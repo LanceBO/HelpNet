@@ -7,6 +7,22 @@
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.login-card {
+  width: 40%;
+  background-color: #FFFFFF;
+  padding: 2em;
+  margin-top: 1em !important;
+  margin-left: 4em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  text-align: left;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  grid-gap: 16px;
+}
+
 .content a {
   text-decoration: none;
 }
